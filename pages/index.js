@@ -12,9 +12,9 @@ export default function Home() {
       <QuizContainer>
         <QuizLogo />
 
-        <Widget>
+        <Widget style={{ marginTop: 0 }}>
           <Widget.Header>
-            <h1>{db.title}</h1>
+            <h1 style={{ color: 'black' }}>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
@@ -25,7 +25,7 @@ export default function Home() {
           <Widget.Content>
             <h1>Quizes da Galera</h1>
             
-            <p>lorem ipsum dolor sit amet...</p>
+            <p>Em construção</p>
           </Widget.Content>
         </Widget>
 
