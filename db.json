@@ -27,7 +27,7 @@
         }
     ],
     "external": [
-        ""
+        "https://quiz-soccer-club.rcttavares.vercel.app/"
     ],
     "theme": {
         "colors": {
