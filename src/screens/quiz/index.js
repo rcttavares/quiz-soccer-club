@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 
+import db from '../../../db.json';
 import QuizBackground from '../../components/QuizBackground';
 import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
 import QuizLogo from '../../components/QuizLogo';
 import Widget from '../../components/Widget';
+import GitHubCorner from '../../components/GitHubCorner';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
 
@@ -23,7 +27,17 @@ function QuestionWidget({
   const hasAlternativeSelected = selectedAlternative !== undefined;
 
   return (
-    <Widget>
+    <Widget
+      style={{ marginTop: -30 }}
+      as={motion.section}
+      transition={{ delay: 0, duration: 0.5 }}
+      variants={{
+        show: { opacity: 1 },
+        hidden: { opacity: 0 },
+      }}
+      initial="hidden"
+      animate="show"
+    >
       <Widget.Header>
         <BackLinkArrow href="/" />
 
@@ -32,24 +46,29 @@ function QuestionWidget({
         </h3>
       </Widget.Header>
 
-      <img
+      <Widget.Image
+        as={motion.img}
+        transition={{ delay: 0, duration: 2 }}
+        variants={{
+          show: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+        initial="hidden"
+        animate="show"
         src={question.image}
-        alt="Descrição"
-        style={{ width: '100%', height: '150%', objectFit: 'cover' }}
+        id="question_image"
       />
 
       <Widget.Content>
-        <h2>
-          {question.title}
-        </h2>
         <p>
-          {question.description}
+          {question.title}
         </p>
 
         <AlternativesForm
           onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
             setIsQuestionSubmited(true);
+            document.getElementById('question_image').style.filter = 'brightness()';
             setTimeout(() => {
               onSubmit();
               addResult(isCorrect);
@@ -97,13 +116,23 @@ function QuestionWidget({
 
 function LoadingWidget() {
   return (
-    <Widget>
+    <Widget
+      style={{ marginTop: -30 }}
+      as={motion.section}
+      transition={{ delay: 0, duration: 0.5 }}
+      variants={{
+        show: { opacity: 1 },
+        hidden: { opacity: 0 },
+      }}
+      initial="hidden"
+      animate="show"
+    >
       <Widget.Header>
         Carregando...
       </Widget.Header>
 
       <Widget.Content>
-        [Desafio do Loading]
+        <img src={db.loading} alt="Carregando..." />
       </Widget.Content>
     </Widget>
   );
@@ -111,7 +140,17 @@ function LoadingWidget() {
 
 function ResultWidget({ results }) {
   return (
-    <Widget>
+    <Widget
+      style={{ marginTop: -30 }}
+      as={motion.section}
+      transition={{ delay: 0, duration: 0.5 }}
+      variants={{
+        show: { opacity: 1 },
+        hidden: { opacity: 0 },
+      }}
+      initial="hidden"
+      animate="show"
+    >
       <Widget.Header>
         Resultado
       </Widget.Header>
@@ -140,6 +179,7 @@ function ResultWidget({ results }) {
               {index + 1}
               {' '}
               Resultado:
+              {' '}
               {result === true
                 ? 'Acertou'
                 : 'Errou'}
@@ -188,6 +228,10 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
   return (
     <QuizBackground backgroundImage={bg}>
+      <Head>
+        <title>Perguntas | Soccer Club</title>
+      </Head>
+
       <QuizContainer>
         <QuizLogo />
 
@@ -205,6 +249,8 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
         {secreenState === secreenStates.RESULT && <ResultWidget results={results} />}
       </QuizContainer>
+
+      <GitHubCorner projectUrl="https://github.com/rcttavares" />
     </QuizBackground>
   );
 }

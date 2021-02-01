@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Widget = styled.div`
-  margin-top: 24px;
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.mainBg};
@@ -69,6 +68,18 @@ Widget.Topic = styled.a`
   &:focus {
     opacity: .5;
   }
+`;
+
+Widget.Image = styled.img`
+  width: 200px;
+  height: 200px;
+  object-fit: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 15px;
+  position: relative;
+  filter: brightness(0);
 `;
 
 export default Widget;

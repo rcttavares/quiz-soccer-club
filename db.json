@@ -1,28 +1,62 @@
 {
     "bg": "https://t3.ftcdn.net/jpg/02/48/65/38/360_F_248653851_lMw1RUwPLpaBsSCT31eE3ZDY8WkIFpiq.jpg",
+    "loading": "https://media.giphy.com/media/7zDZUbVmhxrfRyHgXW/giphy.gif",
     "title": "Você conhece o futebol brasileiro?",
-    "description": "Teste seus conhecimentos sobre o futebol brasileiro nesse quiz",
+    "description": "Você reconhece os escudos de times brasileiros nesse quiz",
     "questions": [
         {
-            "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-            "title": "Como fazer um seletor por id via CSS?",
-            "description": "Essa é pra aquecer",
-            "answer": 2,
+            "image": "https://logodetimes.com/times/cruzeiro/logo-cruzeiro-256.png",
+            "title": "De qual time é esse escudo?",
+            "answer": 1,
             "alternatives": [
-                ".elemento",
-                "*elemento",
-                "#elemento",
-                "%elemento"
+                "Corinthians",
+                "Cruzeiro",
+                "Chapecoense",
+                "Internacional"
             ]
         },
         {
-            "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-            "title": "Como fazer um background gradiente com css?",
-            "description": "Faz tempo em haha",
+            "image": "https://logodetimes.com/times/santos/logo-santos-256.png",
+            "title": "De qual time é esse escudo?",
+            "answer": 3,
+            "alternatives": [
+                "Sampaio Corrêa",
+                "Ceará",
+                "Ponte Preta",
+                "Santos"
+            ]
+        },
+        {
+            "image": "https://logodetimes.com/times/flamengo/logo-flamengo-256.png",
+            "title": "De qual time é esse escudo?",
             "answer": 0,
             "alternatives": [
-                "background: linear-gradient(#e66465, #9198e5);",
-                "background: gradient(#e66465, #9198e5);"
+                "Flamengo",
+                "Paysandu",
+                "Red Bull Bragantino",
+                "Londrina"
+            ]
+        },
+        {
+            "image": "https://logodetimes.com/times/america-mineiro/logo-america-mineiro-256.png",
+            "title": "De qual time é esse escudo?",
+            "answer": 2,
+            "alternatives": [
+                "Atlético-MG",
+                "Sport",
+                "América-MG",
+                "Vasco"
+            ]
+        },
+        {
+            "image": "https://logodetimes.com/times/sao-paulo/logo-sao-paulo-256.png",
+            "title": "De qual time é esse escudo?",
+            "answer": 3,
+            "alternatives": [
+                "Fortaleza",
+                "Avai",
+                "Fluminense",
+                "São Paulo"
             ]
         }
     ],
