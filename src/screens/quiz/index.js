@@ -28,7 +28,6 @@ function QuestionWidget({
 
   return (
     <Widget
-      style={{ marginTop: -30 }}
       as={motion.section}
       transition={{ delay: 0, duration: 0.5 }}
       variants={{
@@ -46,29 +45,23 @@ function QuestionWidget({
         </h3>
       </Widget.Header>
 
-      <Widget.Image
-        as={motion.img}
-        transition={{ delay: 0, duration: 2 }}
-        variants={{
-          show: { opacity: 1 },
-          hidden: { opacity: 0 },
-        }}
-        initial="hidden"
-        animate="show"
+      <img
         src={question.image}
-        id="question_image"
+        alt="Descrição"
+        style={{
+          width: '100%',
+          height: '150px',
+          objectFit: 'cover',
+        }}
       />
 
       <Widget.Content>
-        <p>
-          {question.title}
-        </p>
+        <p>{question.title}</p>
 
         <AlternativesForm
           onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
             setIsQuestionSubmited(true);
-            document.getElementById('question_image').style.filter = 'brightness()';
             setTimeout(() => {
               onSubmit();
               addResult(isCorrect);
@@ -117,7 +110,6 @@ function QuestionWidget({
 function LoadingWidget() {
   return (
     <Widget
-      style={{ marginTop: -30 }}
       as={motion.section}
       transition={{ delay: 0, duration: 0.5 }}
       variants={{
@@ -141,7 +133,6 @@ function LoadingWidget() {
 function ResultWidget({ results }) {
   return (
     <Widget
-      style={{ marginTop: -30 }}
       as={motion.section}
       transition={{ delay: 0, duration: 0.5 }}
       variants={{

@@ -28,7 +28,6 @@ export default function Home() {
         <QuizLogo />
 
         <Widget
-          style={{ marginTop: -30 }}
           as={motion.section}
           transition={{ delay: 0, duration: 0.5 }}
           variants={{
@@ -39,9 +38,7 @@ export default function Home() {
           animate="show"
         >
           <Widget.Header>
-            <h1 style={{ color: 'black' }}>
-              {db.title}
-            </h1>
+            <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
@@ -100,20 +97,20 @@ export default function Home() {
             </ul>
           </Widget.Content>
         </Widget>
+
+        <Footer
+          as={motion.footer}
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          initial="hidden"
+          animate="show"
+        />
       </QuizContainer>
 
       <GitHubCorner projectUrl="https://github.com/rcttavares" />
-
-      <Footer
-        as={motion.footer}
-        transition={{ delay: 0, duration: 0.5 }}
-        variants={{
-          show: { opacity: 1 },
-          hidden: { opacity: 0 },
-        }}
-        initial="hidden"
-        animate="show"
-      />
     </QuizBackground>
   );
 }
