@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import db from '../db.json';
+import './_app.css';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
     /* New styles */
     display: flex;
     flex-direction: column;
-    font-family: 'Lato', sans-serif;
     // Deixa branco no começo
     color: ${({ theme }) => theme.colors.contrastText};
   }

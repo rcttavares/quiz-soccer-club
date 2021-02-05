@@ -3,19 +3,25 @@ import styled from 'styled-components';
 const AlternativesForm = styled.form`
   label {
     &[data-selected="true"] {
-      background-color: ${({ theme }) => theme.colors.primary};
+      color: black;
+      background-color: ${({ theme }) => theme.colors.wrong};
+      box-shadow: inset 2px 2px 1px black;
       
       &[data-status="SUCCESS"] {
+        color: ${({ theme }) => theme.colors.contrastText};
         background-color: ${({ theme }) => theme.colors.success};
+        box-shadow: inset 2px 2px 1px black;
       }
       
       &[data-status="ERROR"] {
-        background-color: ${({ theme }) => theme.colors.wrong};
+        color: ${({ theme }) => theme.colors.contrastText};
+        background-color: ${({ theme }) => theme.colors.error};
+        box-shadow: inset 2px 2px 1px black;
       }
     }
 
     &:focus {
-      opacity: 1;
+      opacity: 0.8;
     } 
   }
 

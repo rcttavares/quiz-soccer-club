@@ -1,78 +1,66 @@
 {
-    "bg": "https://t3.ftcdn.net/jpg/02/48/65/38/360_F_248653851_lMw1RUwPLpaBsSCT31eE3ZDY8WkIFpiq.jpg",
-    "loading": "https://media.giphy.com/media/7zDZUbVmhxrfRyHgXW/giphy.gif",
-    "title": "Você conhece o futebol brasileiro?",
-    "description": "Você reconhece os escudos de times brasileiros nesse quiz",
+    "bg": "https://c4.wallpaperflare.com/wallpaper/88/590/356/club-nintendo-nintendo-nintendo-entertainment-system-super-mario-wallpaper-preview.jpg",
+    "title": "Você conhece o Super Mario?",
+    "description": "Você descubra qual dos personagens principais nesse quiz.",
     "questions": [
         {
-            "image": "https://logodetimes.com/times/cruzeiro/logo-cruzeiro-256.png",
-            "title": "De qual time é esse escudo?",
+            "image": "https://media.giphy.com/media/9JeJyQu07mvhG2p87z/giphy.gif",
+            "title": "Quem é o cavalinho do Mario?",
             "answer": 1,
             "alternatives": [
-                "Corinthians",
-                "Cruzeiro",
-                "Chapecoense",
-                "Internacional"
+                "Parakarry",
+                "Yoshi",
+                "Chain Chomp",
+                "Kooper"
             ]
         },
         {
-            "image": "https://logodetimes.com/times/santos/logo-santos-256.png",
-            "title": "De qual time é esse escudo?",
+            "image": "https://media.giphy.com/media/vi2ciYHi5u0FO/giphy.gif",
+            "title": "Qual é o nome de irmão do Mario?",
             "answer": 3,
             "alternatives": [
-                "Sampaio Corrêa",
-                "Ceará",
-                "Ponte Preta",
-                "Santos"
+                "Waluigi",
+                "Luidi",
+                "Loige",
+                "Luigi"
             ]
         },
         {
-            "image": "https://logodetimes.com/times/flamengo/logo-flamengo-256.png",
-            "title": "De qual time é esse escudo?",
+            "image": "https://media.giphy.com/media/6UDorPg1oGRQ4/giphy.gif",
+            "title": "O que é o Bowser?",
             "answer": 0,
             "alternatives": [
-                "Flamengo",
-                "Paysandu",
-                "Red Bull Bragantino",
-                "Londrina"
+                "Tartaruga",
+                "Dinossauro",
+                "Jacaré",
+                "Dragão"
             ]
         },
         {
-            "image": "https://logodetimes.com/times/america-mineiro/logo-america-mineiro-256.png",
-            "title": "De qual time é esse escudo?",
+            "image": "https://media.giphy.com/media/WuDCNq5d9o1mU/giphy.gif",
+            "title": "Quem é apaixonada por Mario?",
             "answer": 2,
             "alternatives": [
-                "Atlético-MG",
-                "Sport",
-                "América-MG",
-                "Vasco"
-            ]
-        },
-        {
-            "image": "https://logodetimes.com/times/sao-paulo/logo-sao-paulo-256.png",
-            "title": "De qual time é esse escudo?",
-            "answer": 3,
-            "alternatives": [
-                "Fortaleza",
-                "Avai",
-                "Fluminense",
-                "São Paulo"
+                "Daisy",
+                "Rosalina",
+                "Peach",
+                "Pauline"
             ]
         }
     ],
     "external": [
         "https://aluraquiz-base.alura-challenges.vercel.app/",
-        "https://aluraquiz-css.omariosouto.vercel.app/",
-        "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
+        "https://aluraquiz-css.omariosouto.vercel.app/"
     ],
     "theme": {
         "colors": {
-            "primary": "#5FB0CE",
-            "secondary": "#00c853",
-            "mainBg": "#171B35",
+            "primary": "#D54A36",
+            "secondary": "#75B65D",
+            "mainBg": "#2471A3",
             "contrastText": "#FFFFFF",
-            "wrong": "#FF5722",
-            "success": "#4CAF50"
+            "wrong": "#EFD249",
+            "success": "#4CAF50",
+            "error": "#FF5722"
         },
         "borderRadius": "4px"
     }

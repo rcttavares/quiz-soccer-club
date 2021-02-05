@@ -2,8 +2,9 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import Lottie from 'react-lottie';
+import loadingAnimation from '../animations/loading.json';
 
-import db from '../../../db.json';
 import QuizBackground from '../../components/QuizBackground';
 import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
@@ -47,11 +48,13 @@ function QuestionWidget({
 
       <img
         src={question.image}
-        alt="Descrição"
+        alt="GIFs"
         style={{
           width: '100%',
           height: '150px',
           objectFit: 'cover',
+          position: 'relative',
+          right: '4px',
         }}
       />
 
@@ -67,7 +70,7 @@ function QuestionWidget({
               addResult(isCorrect);
               setIsQuestionSubmited(false);
               setSelectedAlternative(undefined);
-            }, 3 * 1000);
+            }, 4 * 1000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
@@ -108,25 +111,21 @@ function QuestionWidget({
 }
 
 function LoadingWidget() {
-  return (
-    <Widget
-      as={motion.section}
-      transition={{ delay: 0, duration: 0.5 }}
-      variants={{
-        show: { opacity: 1 },
-        hidden: { opacity: 0 },
-      }}
-      initial="hidden"
-      animate="show"
-    >
-      <Widget.Header>
-        Carregando...
-      </Widget.Header>
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
 
-      <Widget.Content>
-        <img src={db.loading} alt="Carregando..." />
-      </Widget.Content>
-    </Widget>
+  return (
+    <Lottie
+      options={defaultOptions}
+      height={200}
+      width={200}
+    />
   );
 }
 
@@ -200,7 +199,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
   React.useEffect(() => {
     setTimeout(() => {
       setSecreenState(secreenStates.QUIZ);
-    }, 1 * 1000);
+    }, 4 * 1000);
   }, []);
 
   function handleSubmitQuiz() {
@@ -220,7 +219,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
   return (
     <QuizBackground backgroundImage={bg}>
       <Head>
-        <title>Perguntas | Soccer Club</title>
+        <title>Quiz | Super Mario</title>
       </Head>
 
       <QuizContainer>

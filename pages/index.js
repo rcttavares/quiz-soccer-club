@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title>Home | Soccer Club</title>
+        <title>Home | Super Mario</title>
       </Head>
 
       <QuizContainer>
@@ -50,7 +50,7 @@ export default function Home() {
             >
               <Input
                 onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
-                placeholder="Diga o seu nome para começar a jogar"
+                placeholder="Diz ai seu nome para jogar"
                 name="nomeDoUsuario"
                 value={name}
               />
@@ -73,7 +73,7 @@ export default function Home() {
           animate="show"
         >
           <Widget.Content>
-            <h1>Quizes da Galera</h1>
+            <h1 style={{ textTransform: 'uppercase' }}>Quizes da Galera</h1>
 
             <ul>
               {db.external.map((linkExterno) => {
